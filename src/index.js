@@ -9,10 +9,23 @@ const geoUrl =
 
 const App = () => (
   <div>
-    <ComposableMap>
+    <ComposableMap
+      projection="geoAzimuthalEqualArea"
+      projectionConfig={{
+        rotate: [-20.0, -52.0, 0],
+        scale: 600
+      }}
+    >
       <Geographies geography={geoUrl}>
         {({ geographies }) =>
-          geographies.map(geo => <Geography key={geo.rsmKey} geography={geo} />)
+          geographies.map(geo => (
+            <Geography
+              key={geo.rsmKey}
+              geography={geo}
+              fill="#9998A3"
+              stroke="#EAEAEC"
+            />
+          ))
         }
       </Geographies>
     </ComposableMap>
