@@ -10,7 +10,8 @@
     "react-simple-maps": "^1.0.0-beta.0"
   },
   "devDependencies": {
-    "parcel": "^2.0.0-alpha.3.2"
+    "parcel-bundler": "^1.12.4",
+    "serialize-to-js": "^3.0.2"
   },
   "keywords": [
     "visualisation",
