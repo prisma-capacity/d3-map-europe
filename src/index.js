@@ -1,23 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
-import { ComposableMap, Geographies, Geography } from "react-simple-maps";
+import ReactTooltip from "react-tooltip";
 
 import "./styles.css";
 
-const geoUrl =
-  "https://raw.githubusercontent.com/prisma-capacity/d3-map-europe/master/data/europe.topo.json";
+import EuropeanMap from "./EuropeanMap";
 
-const App = () => (
-  <div>
-    <ComposableMap>
-      <Geographies geography={geoUrl}>
-        {({ geographies }) =>
-          geographies.map(geo => <Geography key={geo.rsmKey} geography={geo} />)
-        }
-      </Geographies>
-    </ComposableMap>
-  </div>
-);
+function App() {
+  const [content, setContent] = useState("");
+  return (
+    <div>
+      <EuropeanMap setTooltipContent={setContent} />
+      <ReactTooltip>{content}</ReactTooltip>
+    </div>
+  );
+}
 
 const rootElement = document.getElementById("app");
 ReactDOM.render(<App />, rootElement);
