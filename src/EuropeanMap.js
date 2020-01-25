@@ -28,7 +28,9 @@ function tsos() {
     const response = axios.get("https://platform.prisma-capacity.eu/rest/tso", {
       headers: {
         Accept: "application/json",
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, OPTIONS"
       }
     });
     let data = null;
