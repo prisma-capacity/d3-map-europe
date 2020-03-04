@@ -1,3 +1,7 @@
+<div align="right"><a target="myNextJob" href="https://www.prisma-capacity.eu/careers#job-offers">
+    <img class="inline" src="prisma.png">
+</a></div>
+
 # Introduction
 
 PRISMA's Map is a customized European Map in [GeoJSON](https://geojson.org/)-format or [TopoJSON](https://github.com/topojson/topojson) which is an extension of a GeoJSON.
